@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(83, 144, 236);
+}
+
+.page_text {
+  color: rgb(255, 255, 255);
+}
+.btn_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 20px; */
+  position: absolute;
+  top: 90%;
+  width: 100%;
+}
+
+.btn {
+  width: 10rem;
+  height: 5vh;
+  margin: 0 10%;
+  border: 1px solid rgb(87, 88, 90);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.enable {
+  background-color: rgb(237, 253, 95);
+}
+.disable {
+  background-color: rgba(237, 253, 95, 0.336);
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}
