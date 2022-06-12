@@ -31,12 +31,12 @@ export default {
     search(name) {
       this.fetchCard(name);
     },
-
+    // тут открывается окошка с инфой о покемоне
     openModal(info) {
       this.isShow = true;
       this.info = info;
     },
-
+    // тут меняется страница
     changePage(direction) {
       if (this.isLoad) return;
 
@@ -52,10 +52,12 @@ export default {
       this.saveData();
     },
 
+    //тут они сохраняются
     saveData() {
       localStorage.clear();
       localStorage.setItem("page", this.page);
     },
+    //данные тут выгружаются
     loadData() {
       this.page = localStorage.getItem("page")
         ? localStorage.getItem("page")
@@ -64,6 +66,8 @@ export default {
         ? (this.page - 1) * this.limit
         : 0;
     },
+
+    // тут я получаю нужное кол во покемонов и отправляю их в компонент listPokemon оттуда уже появлются карточки с картинками и инфой , была возможность получать их по id и вызывать их через цикл но отказался от этого так как после 898id выдавала ошибку , и поэтому применяю это способ
     async fetchCards() {
       this.isLoad = true;
 
@@ -82,7 +86,7 @@ export default {
       }
       this.isLoad = false;
     },
-
+    // тут получаю покемона который вызваются через поисковую строку
     async fetchCard(name) {
       this.isLoad = true;
       try {

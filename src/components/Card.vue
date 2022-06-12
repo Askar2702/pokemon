@@ -30,6 +30,7 @@ export default {
     };
   },
   methods: {
+    // тут получаю инфу о самой карте через запрос с предоставленной url адресом
     async fetchInfo() {
       try {
         const response = await axios.get(this.cardInfo.url);
